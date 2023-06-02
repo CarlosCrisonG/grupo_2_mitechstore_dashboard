@@ -2,6 +2,7 @@ import React from "react";
 import '../Styles.css';
 import './Home.css';
 import Card from "../Card/Card";
+import CardLastUser from "../Card/CardLastUser"
 
 function Home() {
 
@@ -37,21 +38,18 @@ function Home() {
             <div className="card-row">
                 {/* Card Usuarios */}
                 <Card
-                    long= {false}
                     title="Usuarios"
                     icon={<img className="icon" src="/icons/usuarios-orange.png" alt="icon"></img>}
                     count={cantidadUsuarios}
                 />
                 {/* Card Productos */}
                 <Card
-                    long= {false}
                     title="Productos"
                     icon={<img className="icon" src="/icons/productos-orange.png" alt="icon"></img>}
                     count={cantidadProductos}
                 />
                 {/* Card Categorías */}
                 <Card
-                    long= {false}
                     title="Categorias"
                     icon={<img className="icon" src="/icons/categorias-orange.png" alt="icon"></img>}
                     count={cantidadCategorias}
@@ -59,18 +57,14 @@ function Home() {
             </div>
             <div className="card-row">
                 {/* Card Último Usuario Registrado */}
-                <Card
-                    long= {true}
+                <CardLastUser
                     title="Último Usuario Registrado"
                     icon={<img className="icon" src="/icons/usuarios-orange.png" alt="icon"></img>}
-                    count={cantidadUsuarios}
                 />
-                {/* Card Productos */}
-                <Card
-                    long= {true}
-                    title="Productos"
+                {/* Card Último Producto Creado */}
+                <CardLastUser
+                    title="Último Producto Creado"
                     icon={<img className="icon" src="/icons/productos-orange.png" alt="icon"></img>}
-                    count={cantidadProductos}
                 />
             </div>
         </div>
