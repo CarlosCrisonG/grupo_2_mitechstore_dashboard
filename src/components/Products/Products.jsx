@@ -15,15 +15,15 @@ class Users extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3000/api/users")
+        fetch("http://localhost:3000/api/products")
             .then(res => res.json())
             .then((data) => {
                 this.setState({
-                    rows: data.data.map((user) => ({
-                        first_name: user.first_name,
-                        last_name: user.last_name,
-                        userProfile: user.userProfile.name,
-                        country: user.country.name,
+                    rows: data.data.map((product) => ({
+                        name: product.name,
+                        price: product.price,
+                        category: product.category.name,
+                        discount: product.discount,
                     }))
                 })
             })
@@ -36,8 +36,8 @@ class Users extends React.Component {
             <div className="general-container">
 
                 <Table
-                    title="Listado de Usuarios"
-                    columns={["Nombre", "apellido", "País", "Perfil"]}
+                    title="Listado de Productos"
+                    columns={["Nombre", "Precio", "Categoría", "Descuento"]}
                     rows={this.state.rows}
                 />
 

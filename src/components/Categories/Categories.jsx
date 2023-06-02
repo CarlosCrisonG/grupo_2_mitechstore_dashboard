@@ -15,16 +15,13 @@ class Users extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3000/api/users")
+        fetch("http://localhost:3000/api/products")
             .then(res => res.json())
             .then((data) => {
+                const rows = Object.keys(data.meta.countByCategory).map((category) => ({ name: category, quantity: data.meta.countByCategory[category] }))
+
                 this.setState({
-                    rows: data.data.map((user) => ({
-                        first_name: user.first_name,
-                        last_name: user.last_name,
-                        userProfile: user.userProfile.name,
-                        country: user.country.name,
-                    }))
+                    rows
                 })
             })
     }
@@ -36,8 +33,8 @@ class Users extends React.Component {
             <div className="general-container">
 
                 <Table
-                    title="Listado de Usuarios"
-                    columns={["Nombre", "apellido", "País", "Perfil"]}
+                    title="Listado de Categorías"
+                    columns={["Nombre", "Cantidad"]}
                     rows={this.state.rows}
                 />
 
