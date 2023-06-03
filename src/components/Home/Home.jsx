@@ -3,6 +3,7 @@ import '../Styles.css';
 import './Home.css';
 import Card from "../Card/Card";
 import CardLastUser from "../Card/CardLastUser"
+import CardLastProduct from "../Card/CardLastProduct"
 
 function Home() {
 
@@ -62,7 +63,7 @@ function Home() {
                     icon={<img className="icon" src="/icons/usuarios-orange.png" alt="icon"></img>}
                 />
                 {/* Card Último Producto Creado */}
-                <CardLastUser
+                <CardLastProduct
                     title="Último Producto Creado"
                     icon={<img className="icon" src="/icons/productos-orange.png" alt="icon"></img>}
                 />

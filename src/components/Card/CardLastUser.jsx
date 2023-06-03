@@ -8,6 +8,7 @@ function CardLastUser(props) {
     const [lastname, setLastname] = React.useState("Apellido")
     const [country, setCountry] = React.useState("País")
     const [profile, setProfile] = React.useState("Perfil")
+    const [id, setId] = React.useState("ID")
 
     React.useEffect(() => {
         // Fetch de Número de Usuarios
@@ -26,6 +27,7 @@ function CardLastUser(props) {
             setLastname(lastUser.last_name);
             setCountry(lastUser.country.name);
             setProfile(lastUser.userProfile.name);
+            setId(lastUser.id);
         }
     }, [lastUser]);
 
@@ -39,6 +41,7 @@ function CardLastUser(props) {
                 <div className="card-info">
                     <p>{name} {lastname}</p>
                     <p>{country} - {profile}</p>
+                    <p><a href="#" target="_blank">Ver más detalles</a></p>
                 </div>
             </div>
         </div>
