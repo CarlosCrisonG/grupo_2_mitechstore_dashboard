@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import "./Responsive.css"
 
 
 function CardLastProduct(props) {

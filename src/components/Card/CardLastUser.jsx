@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import "./Responsive.css"
 
 
 function CardLastUser(props) {
@@ -41,7 +42,7 @@ function CardLastUser(props) {
                 <div className="card-info">
                     <p>{name} {lastname}</p>
                     <p>{country} - {profile}</p>
-                    <p><a href="#" target="_blank">Ver más detalles</a></p>
+                    <p><a href={`http://localhost:3000/api/users/${id}`} target="_blank">Ver más detalles</a></p>
                 </div>
             </div>
         </div>

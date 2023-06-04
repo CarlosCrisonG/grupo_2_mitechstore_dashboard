@@ -1,0 +1,19 @@
+/*Smartphones*/
+@media (min-width: 320px) {
+    
+}
+
+/*Tablets*/
+@media (min-width: 768px) {}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .card-row {
+        flex-direction: row;
+    }
+    .card .card-title {
+        margin-bottom: 0px;
+    }
+}
+
+

@@ -1,5 +1,6 @@
 import React from "react";
 import '../Styles.css';
+import '../Responsive.css';
 import './Home.css';
 import Card from "../Card/Card";
 import CardLastUser from "../Card/CardLastUser"
@@ -36,7 +37,7 @@ function Home() {
                 <img className="icon" src="/icons/dashboard-black.png" alt="icon"></img>
                 <h1>Dashboard</h1>
             </div>
-            <div className="card-row">
+            <div className="card-row"> {/* Clase padre para organizar Cards */}
                 {/* Card Usuarios */}
                 <Card
                     title="Usuarios"
