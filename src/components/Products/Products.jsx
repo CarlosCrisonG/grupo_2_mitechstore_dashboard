@@ -34,6 +34,10 @@ class Users extends React.Component {
     render() {
         return (
             <div className="general-container">
+            <div className="title">
+                <img className="icon" src="/icons/productos-black.png" alt="icon"></img>
+                <h1>Productos</h1>
+            </div>
 
                 <Table
                     title="Listado de Productos"

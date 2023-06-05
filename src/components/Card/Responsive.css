@@ -4,13 +4,14 @@
 }
 
 /*Tablets*/
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .card-row {
+        justify-content: center;
+    }
+}
 
 /*Desktop*/
 @media (min-width: 1024px) {
-    .card-row {
-        flex-direction: row;
-    }
     .card .card-title {
         margin-bottom: 0px;
     }

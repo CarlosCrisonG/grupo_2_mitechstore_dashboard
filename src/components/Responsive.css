@@ -7,12 +7,11 @@
 
 /*Tablets*/
 @media (min-width: 768px) {
+    #wrapper {
+        max-width: 768px;
+    }
     h1 {
         font-size: 2em;
-    }
-    .general-container {
-        width: 690px;
-        margin-left: 10px;
     }
 }
 
@@ -21,9 +20,8 @@
     body {
         width: 80vw;
     }
-    .general-container {
-        margin-left: 50px;
-        width: 900px;
+    #wrapper {
+        max-width: none;
     }
     .general-container .title .icon {
         width: 30px;

@@ -31,7 +31,10 @@ class Users extends React.Component {
     render() {
         return (
             <div className="general-container">
-
+                <div className="title">
+                    <img className="icon" src="/icons/categorias-black.png" alt="icon"></img>
+                    <h1>Categorias</h1>
+                </div>
                 <Table
                     title="Listado de Categorías"
                     columns={["Nombre", "Cantidad"]}

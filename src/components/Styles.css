@@ -18,11 +18,11 @@ body {
 
 #wrapper {
     display: flex;
-    /* border: 1px solid red; */
+    max-width: 100%;
 }
 
 .general-container {
-    width: 260px;
+    width: 100%;
     margin-left: 10px;
 }
 
@@ -31,6 +31,7 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
 }
 
 .general-container .title .icon {

@@ -4,16 +4,6 @@
 
 /*Tablets*/
 @media (min-width: 768px) {
-    .sidemenu {
-        width: 70px;
-    }
-    .sidemenu .menu-button {
-        width: 50px;
-    }
-}
-
-/*Desktop*/
-@media (min-width: 1024px) {
     .sidemenu .logo-mobile {
         display: none;
 
@@ -36,4 +26,9 @@
     .sidemenu .menu-button span {
         display: block;
     }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    
 }

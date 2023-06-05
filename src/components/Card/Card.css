@@ -15,18 +15,15 @@
     justify-content: space-between;
 }
 
-.card-row {
-    flex-direction: column;
-}
-
 .card-long {
-    width: 350px;
+    width: 100%;
 }
 
 .card-row {
     display: flex;
     align-items: stretch;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card .card-header {
