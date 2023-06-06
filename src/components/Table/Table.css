@@ -15,3 +15,7 @@ table {
 .tabla-scrollable table td {
     white-space: nowrap;
 }
+
+.table-body {
+    text-align: center;
+}

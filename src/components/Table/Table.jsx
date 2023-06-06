@@ -12,7 +12,7 @@ class Lists extends React.Component {
         return (
             <div>
                 <h2>{this.props.title}</h2>
-                <div class="tabla-scrollable">
+                <div className="tabla-scrollable">
                     <table>
                         <thead>
                             <tr>
@@ -21,12 +21,13 @@ class Lists extends React.Component {
                                 })}
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="table-body">
                             {this.props.rows.map((row, i) => {
                                 return <tr key={i}>
                                     {Object.keys(row).map((element, j) => {
                                         return <td key={j}>{row[element]}</td>
                                     })}
+                                    
                                 </tr>
                             })}
                         </tbody>
