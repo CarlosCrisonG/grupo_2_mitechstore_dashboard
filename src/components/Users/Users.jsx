@@ -24,6 +24,7 @@ class Users extends React.Component {
                         last_name: user.last_name,
                         userProfile: user.userProfile.name,
                         country: user.country.name,
+                        id: user.id,
                     }))
                 })
             })
@@ -32,20 +33,22 @@ class Users extends React.Component {
     //Validación para mostrar Next y Prev - PENDIENTE
 
     render() {
+        
         return (
+            <>
+            {this.state.rows.length != 0 ?
             <div className="general-container">
+   
                 <div className="title">
                     <img className="icon" src="/icons/usuarios-black.png" alt="icon"></img>
                     <h1>Usuarios</h1>
                 </div>
-                <Table
-                    title="Listado de Usuarios"
-                    columns={["Nombre", "apellido", "País", "Perfil"]}
-                    rows={this.state.rows}
-                />
-
-
+                <Table title="Listado de Usuarios" columns={["Nombre", "Apellido", "Perfil", "Pais"]} rows={this.state.rows}/>
             </div>
+            :
+            <p>CARGANDO...</p>
+            }
+            </>
         )
     }
 

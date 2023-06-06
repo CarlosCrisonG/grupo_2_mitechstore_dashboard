@@ -81,7 +81,7 @@ body {
 .data-user-info {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 3px;
     padding: 15px 0;
     border-bottom: 1px solid #ededed;
 }
@@ -137,17 +137,22 @@ body {
 
 @media (min-width: 769px) {
     .profile-container {
-        min-width: 40%;
+        min-width: 45%;
     }
 }
 
 @media (min-width: 1025px) {
     .profile-container {
         flex-direction: row;
+        margin-left: 20px;
         min-width: 70%;
     }
     .data-user-info {
         flex-direction: row;
+        gap: 25px;
+    }
+    .data-user-info-label{
+     font-style: italic;   
     }
     .user-container {
         align-self: flex-start;

@@ -2,41 +2,43 @@ import React from "react";
 import '../Styles.css';
 import '../Responsive.css';
 import './Table.css';
+import { Link } from "react-router-dom";
 
-class Lists extends React.Component {
+function Table(props) {
 
+    let [users, setUsers] = React.useState(props)
 
-    //Validación para mostrar Next y Prev - PENDIENTE
-
-    render() {
-        return (
-            <div>
-                <h2>{this.props.title}</h2>
-                <div className="tabla-scrollable">
-                    <table>
-                        <thead>
-                            <tr>
-                                {this.props.columns.map((col, i) => {
-                                    return <th key={i}>{col}</th>
+    return (
+        <>
+            <h2>{props.title}</h2>
+            <div className="tabla-scrollable">
+                <table>
+                    <thead>
+                        <tr>
+                            {users.columns.map((col, i) => {
+                                return <th key={i}>{col}</th>
+                            })}
+                        </tr>
+                    </thead>
+                    <tbody className="table-body">
+                        {users.rows.map((row, i) => {
+                            return <tr key={i}>
+                                {Object.keys(row).map((element, j) => {
+                                    if (element != "id") {
+                                        return <td key={j}>{row[element]}</td>
+                                    } else {
+                                        let id = row["id"]
+                                        return <td key={j + j}><Link to="/userProfile" state={{id}}>Detalles</Link></td>
+                                    }
                                 })}
                             </tr>
-                        </thead>
-                        <tbody className="table-body">
-                            {this.props.rows.map((row, i) => {
-                                return <tr key={i}>
-                                    {Object.keys(row).map((element, j) => {
-                                        return <td key={j}>{row[element]}</td>
-                                    })}
-                                    
-                                </tr>
-                            })}
-                        </tbody>
-                    </table>
-                </div>
+                        })}
+                    </tbody>
+                </table>
             </div>
-        )
-    }
+        </>
+    )
 
 }
 
-export default Lists;
+export default Table;

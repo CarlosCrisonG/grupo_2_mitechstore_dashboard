@@ -1,13 +1,17 @@
 import React from "react";
 import "./UserProfile.css"
+import { useLocation } from "react-router-dom";
 
 function UserProfile() {
 
     let [user, setUser] = React.useState({})
+    let [page, setPage] = React.useState(1)
 
-    let userDetailApi = async () => {
+    let { state } = useLocation();
+
+    let userDetailApi = async (state) => {
         try {
-            let userDetail = await fetch("http://localhost:3000/api/users/16")
+            let userDetail = await fetch(`http://localhost:3000/api/users/${state.id}`)
             userDetail = await userDetail.json()
             setUser(userDetail.data)
         } catch (error) {
@@ -17,14 +21,12 @@ function UserProfile() {
 
     React.useEffect(() => {
         //Fetch detalle usuario
-        userDetailApi();
+        userDetailApi(state);
     }, [])
 
     return (
-
-
         <>
-            {Object.keys(user).length != 0 ?
+            {Object.keys(user).length > 0 ?
                     <div className="profile-container">
                         <div className="user-container">
                             <div>
