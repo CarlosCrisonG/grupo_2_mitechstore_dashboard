@@ -151,9 +151,6 @@ body {
         flex-direction: row;
         gap: 25px;
     }
-    .data-user-info-label{
-     font-style: italic;   
-    }
     .user-container {
         align-self: flex-start;
         max-width: 300px;

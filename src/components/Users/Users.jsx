@@ -1,57 +1,69 @@
 import React from "react";
 import '../Styles.css';
-import Card from "../Card/Card";
+import '../Users/Users.css';
 import Table from "../Table/Table";
 
-class Users extends React.Component {
+function Users() {
 
-    constructor(props) {
-        super(props)
+    let [users, setUsers] = React.useState([])
+    let [page, setPage] = React.useState(1)
+    let [totalPages, setTotalPages] = React.useState()
 
-        this.state = {
-            rows: []
+    let fetchUsersApi = async () => {
+        try {
+            let usersFromApi = await fetch(`http://localhost:3000/api/users?page=${page}`)
+            usersFromApi = await usersFromApi.json()
+            let rows = usersFromApi.data.map(user => ({
+                first_name: user.first_name,
+                last_name: user.last_name,
+                userProfile: user.userProfile.name,
+                country: user.country.name,
+                id: user.id
+            }))
+            setUsers(rows)
+            setTotalPages(usersFromApi.meta.total_pages)
+        } catch (error) {
+            console.log(error);
         }
-
     }
 
-    componentDidMount() {
-        fetch("http://localhost:3000/api/users")
-            .then(res => res.json())
-            .then((data) => {
-                this.setState({
-                    rows: data.data.map((user) => ({
-                        first_name: user.first_name,
-                        last_name: user.last_name,
-                        userProfile: user.userProfile.name,
-                        country: user.country.name,
-                        id: user.id,
-                    }))
-                })
-            })
+    React.useEffect(() => {
+        fetchUsersApi()
+    }, [])
+
+    let handlePrevPage = (e) => {
+        e.preventDefault();
+        setPage(page - 1)
     }
 
-    //Validación para mostrar Next y Prev - PENDIENTE
+    let handleNextPage = (e) => {
+        e.preventDefault();
+        setPage(page + 1)
+    }
 
-    render() {
-        
-        return (
-            <>
-            {this.state.rows.length != 0 ?
+    React.useEffect(() => {
+        setUsers([])
+        fetchUsersApi();
+    }, [page]);
+
+    return (
+        <> {users.length > 0 ?
             <div className="general-container">
-   
+
                 <div className="title">
                     <img className="icon" src="/icons/usuarios-black.png" alt="icon"></img>
                     <h1>Usuarios</h1>
                 </div>
-                <Table title="Listado de Usuarios" columns={["Nombre", "Apellido", "Perfil", "Pais"]} rows={this.state.rows}/>
+                <Table title="Listado de Usuarios" columns={["Nombre", "Apellido", "Perfil", "Pais"]} rows={users} />
+                <div className="buttons">
+                    <button className="page-button" onClick={handlePrevPage} disabled={page === 1}> Página previa </button>
+                    <button className="page-button" onClick={handleNextPage} disabled={page === totalPages}> Página siguiente </button>
+                </div>
             </div>
             :
             <p>CARGANDO...</p>
-            }
-            </>
-        )
-    }
-
+        }</>
+    )
 }
 
 export default Users;
