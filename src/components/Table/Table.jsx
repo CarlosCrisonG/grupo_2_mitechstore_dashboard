@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Table(props) {
 
-    let [users, setUsers] = React.useState(props)
+    let [data, setData] = React.useState(props)
 
     return (
         <>
@@ -15,20 +15,26 @@ function Table(props) {
                 <table>
                     <thead>
                         <tr>
-                            {users.columns.map((col, i) => {
+                            {data.columns.map((col, i) => {
                                 return <th key={i}>{col}</th>
                             })}
                         </tr>
                     </thead>
                     <tbody className="table-body">
-                        {users.rows.map((row, i) => {
+                        {data.rows.map((row, i) => {
                             return <tr key={i}>
                                 {Object.keys(row).map((element, j) => {
                                     if (element != "id") {
                                         return <td key={j}>{row[element]}</td>
                                     } else {
-                                        let id = row["id"]
-                                        return <td key={j + j}><Link to="/userProfile" state={{id}}>Detalles</Link></td>
+                                        if (props.title != "Listado de Productos") {
+                                            let id = row["id"]
+                                            return <td key={j + j}><Link to="/userProfile" state={{id}}>Detalles</Link></td>
+                                            
+                                        } else {
+                                            let id = row["id"]
+                                            return <td key={j + j}><a href={`http://localhost:3000/product/detail/${id}`} target="_blank">Detalles</a></td>
+                                        }
                                     }
                                 })}
                             </tr>
