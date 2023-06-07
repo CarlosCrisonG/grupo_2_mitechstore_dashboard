@@ -43,6 +43,7 @@ p {
     font-size: 17px;
     font-weight: 600;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .profile-picture {
@@ -157,6 +158,9 @@ p {
     .data-user-info {
         flex-direction: row;
         gap: 25px;
+    }
+    .data-user-info-label {
+        font-size: 18px;
     }
     .user-container {
         max-width: 390px;

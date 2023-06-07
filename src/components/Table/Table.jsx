@@ -35,7 +35,7 @@ function Table(props) {
                                             return <td key={j + j + j}><Link to="/userProfile" state={{id}}>Detalles</Link></td>
                                         } else {
                                             let id = row["id"]
-                                            return <td key={j + j + j}><a href={`http://localhost:3000/product/detail/${id}`} target="_blank">Detalles</a></td>
+                                            return <td key={j + j + j}><Link to="/productDetail" state={{id}}>Detalles</Link></td>
                                         }
                                     }
                                 })}
