@@ -4,7 +4,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
 import Home from './components/Home/Home'
-import Table from './components/Table/Table'
 import Error from './components/Error'
 import SideMenu from './components/SideMenu/SideMenu'
 import Users from "./components/Users/Users"
