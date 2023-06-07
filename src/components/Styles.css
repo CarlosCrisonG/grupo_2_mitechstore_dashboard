@@ -6,9 +6,9 @@ font-family: 'Montserrat', sans-serif;
 */
 
 body {
+    width: 100vw;
     background-color: rgba(242, 242, 242, 1);
     color: #222231;
-    width: 1200px;
     display: table;
     margin-left: auto;
     margin-right: auto;
@@ -18,5 +18,37 @@ body {
 
 #wrapper {
     display: flex;
-    border: 1px solid red; /*Solo durante desarrollo*/
+    max-width: 100%;
+}
+
+.general-container {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.general-container .title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.general-container .title .icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+p {
+    margin: 5px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color:#3668F1;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color:#FF6700;
 }

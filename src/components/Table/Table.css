@@ -1,3 +1,17 @@
 table {
     border: 1px solid black;
 }
+
+.tabla-scrollable {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.tabla-scrollable table {
+    width: 100%;
+}
+
+.tabla-scrollable table td {
+    white-space: nowrap;
+}

@@ -1,0 +1,34 @@
+/*Smartphones*/
+@media (min-width: 320px) {
+}
+
+/*Tablets*/
+@media (min-width: 768px) {
+    .sidemenu .logo-mobile {
+        display: none;
+
+    }
+    .sidemenu .logo {
+        display: block;
+    }
+    .sidemenu {
+        width: 250px;
+    }
+    .sidemenu .icon {
+        margin-right: 10px;
+    }
+    .sidemenu .menu-button {
+        border-radius: 10px;
+        width: 100%;
+        padding: 15px 30px;
+    }
+    
+    .sidemenu .menu-button span {
+        display: block;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    
+}

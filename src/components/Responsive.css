@@ -1,0 +1,39 @@
+/*Smartphones*/
+@media (min-width: 320px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/*Tablets*/
+@media (min-width: 768px) {
+    #wrapper {
+        max-width: 768px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    body {
+        width: 80vw;
+    }
+    #wrapper {
+        max-width: none;
+    }
+    .general-container .title .icon {
+        width: 30px;
+        margin-right: 10px;
+    }
+}
+
+/*Large Screens*/
+@media (min-width: 2560px) {
+    body {
+        width: 60vw;
+    }
+}
+
+
