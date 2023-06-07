@@ -15,7 +15,6 @@ p {
     height: 100%;
     max-width: 212px;
     margin: auto;
-    margin-top: 20px;
 }
 
 .user-container {
@@ -113,6 +112,19 @@ p {
     cursor: pointer;
 }
 
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .icon {
+    width: 37px;
+    margin-right: 10px;
+}
+
 @media (min-width: 321px) {
     .profile-container {
         min-width: 260px;
@@ -139,7 +151,6 @@ p {
 
 @media (min-width: 1025px) {
     .profile-container {
-        flex-direction: row;
         margin-left: 20px;
         min-width: 70%;
     }
@@ -148,8 +159,7 @@ p {
         gap: 25px;
     }
     .user-container {
-        align-self: flex-start;
-        max-width: 300px;
+        max-width: 390px;
     }
     .data-container {
         max-width: 600px;
