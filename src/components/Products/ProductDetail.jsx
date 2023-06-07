@@ -50,8 +50,8 @@ function PorductDetail() {
                 <main className="product-detail-main-container">
                     <section className="main-section">
                         <div className="title">
-                        <img className="icon" src="/icons/productos-black.png" alt="icon"></img>
-                        <h1 className="titulo-producto-mobile">Detalle del producto</h1>
+                            <img className="icon" src="/icons/productos-black.png" alt="icon"></img>
+                            <h1 className="titulo-producto-mobile">Detalle del producto</h1>
                         </div>
                         <div className="main-top-section">
                             {/* <!-- Carrusel --> */}
@@ -71,6 +71,10 @@ function PorductDetail() {
                                     <div className="separador">
                                         <label className="label">Precio:</label>
                                         <span className="precio">{product.price}</span>
+                                    </div>
+                                    <div className="separador">
+                                        <label className="label">Categoria:</label>
+                                        <span className="precio">{product.category.name}</span>
                                     </div>
                                     <div className="color separador">
                                         <label className="label">Colores:</label>
