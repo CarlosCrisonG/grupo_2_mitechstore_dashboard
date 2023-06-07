@@ -26,14 +26,16 @@ function Table(props) {
                                 {Object.keys(row).map((element, j) => {
                                     if (element != "id") {
                                         return <td key={j}>{row[element]}</td>
+                                    } else if (props.title === "Lista de Categorias" && element == "id") {
+                                        let id = row["id"]
+                                        return <td key={j}><a href={`http://localhost:3000/product/list?category=${id}`} target="_blank">Detalles</a></td>
                                     } else {
                                         if (props.title != "Listado de Productos") {
                                             let id = row["id"]
-                                            return <td key={j + j}><Link to="/userProfile" state={{id}}>Detalles</Link></td>
-                                            
+                                            return <td key={j + j + j}><Link to="/userProfile" state={{id}}>Detalles</Link></td>
                                         } else {
                                             let id = row["id"]
-                                            return <td key={j + j}><a href={`http://localhost:3000/product/detail/${id}`} target="_blank">Detalles</a></td>
+                                            return <td key={j + j + j}><a href={`http://localhost:3000/product/detail/${id}`} target="_blank">Detalles</a></td>
                                         }
                                     }
                                 })}
