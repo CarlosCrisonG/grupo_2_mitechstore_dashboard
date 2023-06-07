@@ -2,6 +2,7 @@ import React from "react";
 import '../Styles.css';
 import '../Users/Users.css';
 import Table from "../Table/Table";
+import Loader from "../Loader/Loader"
 
 function Users() {
 
@@ -71,7 +72,7 @@ function Users() {
                 </div>
             </div>
             :
-            <p>CARGANDO...</p>
+            <Loader />
         }</>
     )
 }
