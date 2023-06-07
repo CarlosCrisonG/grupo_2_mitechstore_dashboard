@@ -6,10 +6,6 @@ p {
     font-size: 17px;
 }
 
-body {
-    background-color: #ccc;
-}
-
 .profile-container {
     display: flex;
     justify-content: center;

@@ -6,3 +6,7 @@
 .page-button {
     margin-right: 10px ;
 }
+
+.prev-button {
+    transform: rotate(180deg);
+}

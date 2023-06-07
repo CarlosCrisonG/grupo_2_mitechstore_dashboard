@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 function UserProfile() {
 
     let [user, setUser] = React.useState({})
-    let [page, setPage] = React.useState(1)
 
     let { state } = useLocation();
 
