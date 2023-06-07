@@ -4,12 +4,9 @@ main {
 }
 
 .titulo-producto-mobile {
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: solid 1px gray;
     margin-bottom: 0px;
     margin-top: 0px;
-    color: #FF6700
+    color: #222231;
 }
 
 .titulo-producto-desktop {
@@ -154,6 +151,14 @@ p.texto {
     box-shadow: 0px 0px 5px rgb(100, 100, 100);
 }
 
+.main-section img.icon {
+    width: 20px;
+    margin-right: 10px;
+}
+.titulo-producto-mobile {
+    font-size: 1.3em;
+}
+
 /* ---------------------Estilos Carrusel -- Inicio */
 #carrusel {
     width: 100%;
@@ -190,19 +195,27 @@ p.texto {
     right: 0;
     border-radius: 0 5px 5px 0;
 }
-@keyframes fade {
-    from {
-        opacity: .4
-    }
 
-    to {
-        opacity: 1
-    }
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* ------------ Estilos Carrusel -- Fin */
 
 @media (min-width: 1025px) {
+
+    .titulo-producto-mobile {
+        font-size: 2em;
+    }
+    
+
+    .main-section img.icon {
+        width: 30px;
+        margin-right: 10px;
+    }
+    
 
     .separador {
         margin: 0;

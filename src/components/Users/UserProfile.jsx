@@ -29,7 +29,7 @@ function UserProfile() {
                 <div className="profile-container">
                     <div className="title">
                         <img className="icon" src="/icons/usuario.png" alt="icon"></img>
-                        <h1>Detalles del usuario</h1>
+                        <h1>Detalle del usuario</h1>
                     </div>
                     <div className="user-container">
                         <div>

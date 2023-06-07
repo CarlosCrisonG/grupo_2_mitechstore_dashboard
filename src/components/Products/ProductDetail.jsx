@@ -49,7 +49,10 @@ function PorductDetail() {
             {Object.keys(product).length > 0 ?
                 <main className="product-detail-main-container">
                     <section className="main-section">
-                        <h4 className="titulo-producto-mobile">Detalle del producto</h4>
+                        <div className="title">
+                        <img className="icon" src="/icons/productos-black.png" alt="icon"></img>
+                        <h1 className="titulo-producto-mobile">Detalle del producto</h1>
+                        </div>
                         <div className="main-top-section">
                             {/* <!-- Carrusel --> */}
                             <section id="carrusel">
