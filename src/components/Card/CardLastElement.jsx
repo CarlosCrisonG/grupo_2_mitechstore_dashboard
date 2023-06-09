@@ -14,7 +14,6 @@ function CardLastElement(props) {
         try {
             let dataFromApi = await fetch(`http://localhost:3000/api/${elementToSearch}`)
             dataFromApi = await dataFromApi.json();
-            console.log(dataFromApi);
             if (dataFromApi.meta.total_pages > 1) {
                 let totalPages = dataFromApi.meta.total_pages;
                 let lastPageData = await fetch(`http://localhost:3000/api/${elementToSearch}?page=${totalPages}`)
