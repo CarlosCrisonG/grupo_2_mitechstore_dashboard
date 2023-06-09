@@ -3,7 +3,7 @@ import "./SideMenu.css";
 import "./Responsive.css"
 import { Link } from "react-router-dom";
 
-function Home() {
+function SideMenu() {
     return (
         <>
             <div className="sidemenu">
@@ -31,4 +31,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default SideMenu;
