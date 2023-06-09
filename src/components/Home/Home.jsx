@@ -3,8 +3,7 @@ import '../Styles.css';
 import '../Responsive.css';
 import './Home.css';
 import Card from "../Card/Card";
-import CardLastUser from "../Card/CardLastUser"
-import CardLastProduct from "../Card/CardLastProduct"
+import CardLastElement from "../Card/CardLastElement"
 
 function Home() {
 
@@ -59,12 +58,14 @@ function Home() {
             </div>
             <div className="card-row">
                 {/* Card Último Usuario Registrado */}
-                <CardLastUser
+                <CardLastElement
+                    elements = "users"
                     title="Último Usuario Registrado"
                     icon={<img className="icon" src="/icons/usuarios-orange.png" alt="icon"></img>}
                 />
                 {/* Card Último Producto Creado */}
-                <CardLastProduct
+                <CardLastElement
+                    elements = "products"
                     title="Último Producto Creado"
                     icon={<img className="icon" src="/icons/productos-orange.png" alt="icon"></img>}
                 />

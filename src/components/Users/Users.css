@@ -1,0 +1,12 @@
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    margin-right: 10px ;
+}
+
+.prev-button {
+    transform: rotate(180deg);
+}

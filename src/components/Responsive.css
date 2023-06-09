@@ -18,7 +18,7 @@
 /*Desktop*/
 @media (min-width: 1024px) {
     body {
-        width: 80vw;
+        width: 75vw;
     }
     #wrapper {
         max-width: none;
