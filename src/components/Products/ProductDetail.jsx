@@ -1,7 +1,8 @@
 import React from "react";
 import "./ProductDetail.css";
+import "./Responsive.css";
 import { useLocation } from "react-router-dom";
-import Loader from "../Loader/Loader"
+import { TailSpin } from 'react-loader-spinner';
 
 function PorductDetail() {
 
@@ -47,6 +48,7 @@ function PorductDetail() {
     return (
         <>
             {Object.keys(product).length > 0 ?
+            <div className="general-container">
                 <main className="product-detail-main-container">
                     <section className="main-section">
                         <div className="title">
@@ -103,8 +105,20 @@ function PorductDetail() {
                         </div>
                     </section>
                 </main>
+            </div>
                 :
-                <Loader />
+                <div className="general-container">
+                    <TailSpin
+                        height="80"
+                        width="80"
+                        color="#FF6700"
+                        ariaLabel="tail-spin-loading"
+                        radius="1"
+                        wrapperStyle={{}}
+                        wrapperClass="spinner"
+                        visible={true}
+                    />
+                </div>
             }
         </>
     )

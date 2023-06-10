@@ -3,7 +3,7 @@
 }
 
 .card {   
-    width: 200px; 
+    width: 55vw;
     background-color: white;
     padding: 15px 20px;
     border-radius: 10px;
@@ -13,10 +13,6 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
-
-.card-long {
-    width: 100%;
 }
 
 .card-row {

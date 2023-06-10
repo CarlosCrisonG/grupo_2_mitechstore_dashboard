@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 import "./Responsive.css"
-import Loader from "../Loader/Loader"
+import { TailSpin } from 'react-loader-spinner'
 import { Link } from "react-router-dom";
 import { element } from "prop-types";
 
@@ -43,22 +43,31 @@ function CardLastElement(props) {
                     </div>
                     <div className="card-info">
                         {elementToSearch == "users" ?
-                        <>
-                        <p> {lastElement.first_name} {lastElement.last_name}</p>
-                        <p>{lastElement.country.name} - {lastElement.userProfile.name}</p>
-                        <p><Link to="/userProfile" state={{ id: lastElement.id }}>Ver más detalles</Link></p>
-                        </>
-                        :
-                        <>
-                        <p>{lastElement.name}</p>
-                        <p>{lastElement.price}  -  {lastElement.category.name}</p>
-                        <p><Link to="/productDetail" state={{ id: lastElement.id }}>Ver más detalles</Link></p>
-                        </>}
+                            <>
+                                <p> {lastElement.first_name} {lastElement.last_name}</p>
+                                <p>{lastElement.country.name} - {lastElement.userProfile.name}</p>
+                                <p><Link to="/userProfile" state={{ id: lastElement.id }}>Ver más detalles</Link></p>
+                            </>
+                            :
+                            <>
+                                <p>{lastElement.name}</p>
+                                <p>{lastElement.price}  -  {lastElement.category.name}</p>
+                                <p><Link to="/productDetail" state={{ id: lastElement.id }}>Ver más detalles</Link></p>
+                            </>}
                     </div>
                 </div>
             </div >
             :
-            <Loader />
+            <TailSpin
+                height="40"
+                width="40"
+                color="#FF6700"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                wrapperStyle={{}}
+                wrapperClass="spinner-card"
+                visible={true}
+            />
         }
         </>
     )

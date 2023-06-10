@@ -1,0 +1,161 @@
+/*Smartphones*/
+@media (min-width: 320px) {}
+
+/*Smartphones*/
+@media (min-width: 425px) {
+    .slideshow-container img {
+        width: auto !important;
+        margin: auto;
+        display: flex;
+        height: 40vh;
+    }
+}
+
+/*Tablets*/
+@media (min-width: 768px) {
+    .slideshow-container img {
+        width: auto !important;
+        margin: auto;
+        display: flex;
+        height: 50vh;
+    }
+
+    #carrusel {
+        height: 50vh;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .titulo-producto-mobile {
+        font-size: 2em;
+    }
+
+
+    .main-section img.icon {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+
+    .separador {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-section {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    #carrusel {
+        width: 50%;
+    }
+
+    .right-box {
+        width: 40%;
+        padding: 20px;
+        height: fit-content;
+    }
+
+    .main-top-section {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product-cost-box {
+        border-top: none;
+        padding: 0;
+    }
+
+    .titulo-producto-desktop {
+        display: inline-block;
+    }
+
+    .precio {
+        font-size: 26px;
+        display: inline-block;
+    }
+
+    .cuotas {
+        display: inline-block;
+    }
+
+    .product-caract-box {
+        border-left: solid 1px gray;
+        border-right: solid 1px gray;
+    }
+
+    .subtitle-caracteristicas {
+        text-align: center;
+    }
+
+    #truck {
+        display: none;
+    }
+
+    .envio {
+        display: block;
+    }
+
+    .color {
+        display: block;
+        margin-right: 15px;
+    }
+
+    .product-descr-box {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    .product-descr-box p {
+        line-height: 22px;
+    }
+
+    .prev {
+        margin-left: 10px;
+    }
+
+    .next {
+        margin-right: 10px;
+    }
+
+    .precio {
+        font-size: 17px;
+        margin-right: 20px;
+        margin-bottom: 17px;
+        margin-top: 17px;
+    }
+
+    .cuotas {
+        margin-right: 60px;
+    }
+
+    .right-box {
+        margin-top: 50px;
+    }
+
+    p.texto {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    li.caracteristicas {
+        font-size: 17px;
+    }
+
+    .color {
+        margin-top: 10px;
+    }
+
+    .color ul {
+        margin-bottom: 17px;
+    }
+}
+
+/*Large Screens*/
+@media (min-width: 2560px) {}

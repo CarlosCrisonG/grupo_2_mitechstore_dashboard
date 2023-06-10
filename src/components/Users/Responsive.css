@@ -1,0 +1,25 @@
+/*Smartphones*/
+@media (min-width: 320px) {}
+
+/*Tablets*/
+@media (min-width: 768px) {
+    .full-container {
+        width: 60%;
+    }
+    .title h1 {
+        font-size: 1.7em;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .full-container {
+        width: 50%;
+    }
+    .title h1 {
+        font-size: 2em;
+    }
+}
+
+/*Large Screens*/
+@media (min-width: 2560px) {}

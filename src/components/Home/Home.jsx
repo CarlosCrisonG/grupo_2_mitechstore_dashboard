@@ -11,7 +11,7 @@ function Home() {
     const [cantidadProductos, setCantidadProductos] = React.useState(0)
     const [cantidadCategorias, setCantidadCategorias] = React.useState(0)
 
-    React.useEffect(() => {
+    let fetchCardsInfo = () => {
         // Fetch de Número de Usuarios
         fetch('http://localhost:3000/api/users')
             .then(res => res.json())
@@ -28,6 +28,11 @@ function Home() {
                 const cantidadCategorias = Object.keys(data.meta.countByCategory).length;
                 setCantidadCategorias(cantidadCategorias) //Cantidad de Categorias
             })
+    }
+
+
+    React.useEffect(() => {
+        fetchCardsInfo()
     }, [])
 
     return (

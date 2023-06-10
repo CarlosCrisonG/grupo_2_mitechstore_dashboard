@@ -8,12 +8,28 @@
     .card-row {
         justify-content: center;
     }
+    .card-container {
+        display: flex;
+    }
+    .card {   
+        width: 20vw;
+    }
+    .card-long {   
+        width: 40vw;
+    }
+    
 }
 
 /*Desktop*/
 @media (min-width: 1024px) {
     .card .card-title {
         margin-bottom: 0px;
+    }
+    .card {   
+        width: 20vw;
+    }
+    .card-long {   
+        width: 35vw;
     }
 }
 
