@@ -1,0 +1,21 @@
+/*Smartphones*/
+@media (min-width: 320px) {}
+
+/*Tablets*/
+@media (min-width: 768px) {
+    .mi-table {
+        margin: 20px auto;
+        width: 50vw;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {}
+
+/*Large Desktops*/
+@media (min-width: 1440px) {
+    .mi-table {
+        margin: 20px auto;
+        width: 50vw;
+    }
+}

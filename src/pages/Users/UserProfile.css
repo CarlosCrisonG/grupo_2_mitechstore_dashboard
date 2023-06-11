@@ -79,8 +79,12 @@ p {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #ededed;
+}
+
+.data-user-info p {
+    overflow: hidden;
 }
 
 .btn-update {

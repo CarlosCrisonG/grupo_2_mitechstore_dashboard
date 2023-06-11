@@ -12,10 +12,10 @@
         display: flex;
     }
     .card {   
-        width: 20vw;
+        width: 22vw;
     }
     .card-long {   
-        width: 40vw;
+        width: 50vw;
     }
     
 }
@@ -26,10 +26,10 @@
         margin-bottom: 0px;
     }
     .card {   
-        width: 20vw;
+        width: 16vw;
     }
     .card-long {   
-        width: 35vw;
+        width: 27vw;
     }
 }
 

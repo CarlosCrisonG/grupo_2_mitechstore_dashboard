@@ -1,9 +1,9 @@
 .mi-table {
-    margin-left: 20px;
+    width: 55vw;
     background-color: white;
     padding: 15px 20px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
     box-shadow: 0px 5px 10px #888888;
     border-collapse: collapse;
 }

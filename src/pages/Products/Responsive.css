@@ -85,11 +85,6 @@
         display: inline-block;
     }
 
-    .product-caract-box {
-        border-left: solid 1px gray;
-        border-right: solid 1px gray;
-    }
-
     .subtitle-caracteristicas {
         text-align: center;
     }

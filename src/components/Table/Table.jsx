@@ -1,7 +1,7 @@
 import React from "react";
-import '../Styles.css';
-import '../Responsive.css';
+import '../../Styles.css';
 import './Table.css';
+import './Responsive.css';
 import { Link } from "react-router-dom";
 
 function Table(props) {

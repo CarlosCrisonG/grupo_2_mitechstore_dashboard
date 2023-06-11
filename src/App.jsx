@@ -2,14 +2,14 @@ import { Routes, Route } from "react-router-dom"
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import Home from './components/Home/Home'
+import Home from './pages/Home/Home'
 import Error from './components/Error'
 import SideMenu from './components/SideMenu/SideMenu'
-import Users from "./components/Users/Users"
-import UserProfile from "./components/Users/UserProfile"
-import Products from "./components/Products/Products"
-import PorductDetail from "./components/Products/ProductDetail"
-import Categories from "./components/Categories/Categories"
+import Users from "./pages/Users/Users"
+import UserProfile from "./pages/Users/UserProfile"
+import Products from "./pages/Products/Products"
+import PorductDetail from "./pages/Products/ProductDetail"
+import Categories from "./pages/Categories/Categories"
 
 function App() {
   return (

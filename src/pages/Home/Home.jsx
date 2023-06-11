@@ -1,9 +1,9 @@
 import React from "react";
-import '../Styles.css';
-import '../Responsive.css';
+import '../../Styles.css';
+import '../../Responsive.css';
 import './Home.css';
-import Card from "../Card/Card";
-import CardLastElement from "../Card/CardLastElement"
+import Card from "../../components/Card/Card";
+import CardLastElement from "../../components/Card/CardLastElement"
 
 function Home() {
 

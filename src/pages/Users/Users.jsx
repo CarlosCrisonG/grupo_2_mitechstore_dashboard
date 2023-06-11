@@ -1,10 +1,10 @@
 import React from "react";
-import '../Styles.css';
-import '../Users/Users.css';
-import Table from "../Table/Table";
+import '../../Styles.css';
+import './Users.css';
+import Table from "../../components/Table/Table";
 import { TailSpin } from 'react-loader-spinner';
-import Card from "../Card/Card";
-import CardLastElement from "../Card/CardLastElement";
+import Card from "../../components/Card/Card";
+import CardLastElement from "../../components/Card/CardLastElement";
 
 function Users() {
 

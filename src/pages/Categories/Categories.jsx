@@ -1,7 +1,6 @@
 import React from "react";
-import '../Styles.css';
-import Card from "../Card/Card";
-import Table from "../Table/Table";
+import '../../Styles.css';
+import Table from "../../components/Table/Table";
 import { TailSpin } from 'react-loader-spinner'
 
 function Categories() {
