@@ -84,7 +84,8 @@ p {
 }
 
 .data-user-info p {
-    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .btn-update {

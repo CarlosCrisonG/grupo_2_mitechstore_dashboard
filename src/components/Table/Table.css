@@ -27,9 +27,14 @@
 }
 
 .tabla-scrollable table td {
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 
 .table-body {
     text-align: center;
+}
+
+.arrow-buttons,
+.page-button {
+    cursor: pointer;
 }

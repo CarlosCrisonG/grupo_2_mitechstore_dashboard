@@ -2,26 +2,12 @@
 @media (min-width: 320px) {}
 
 /*Smartphones*/
-@media (min-width: 425px) {
-    .slideshow-container img {
-        width: auto !important;
-        margin: auto;
-        display: flex;
-        height: 40vh;
-    }
-}
+@media (min-width: 425px) {}
 
 /*Tablets*/
 @media (min-width: 768px) {
     .slideshow-container img {
-        width: auto !important;
-        margin: auto;
-        display: flex;
-        height: 50vh;
-    }
-
-    #carrusel {
-        height: 50vh;
+        max-height: 50vh;
     }
 }
 
@@ -56,15 +42,13 @@
     .right-box {
         width: 40%;
         padding: 20px;
-        height: fit-content;
     }
 
     .main-top-section {
-        width: 100%;
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
+        align-items: stretch;
     }
 
     .product-cost-box {
@@ -104,7 +88,6 @@
 
     .product-descr-box {
         border-bottom: none;
-        padding: 0;
     }
 
     .product-descr-box p {
@@ -128,10 +111,6 @@
 
     .cuotas {
         margin-right: 60px;
-    }
-
-    .right-box {
-        margin-top: 50px;
     }
 
     p.texto {

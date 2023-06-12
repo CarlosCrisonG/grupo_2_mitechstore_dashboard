@@ -21,7 +21,7 @@ main {
 }
 
 .product-cost-box {
-    padding: 3px 20px 0px 20px;
+    padding: 20px;
     position: relative;
 }
 
@@ -41,7 +41,8 @@ span.texto {
 .cuotas {
     color: #00a650;
     font-weight: 600;
-    margin-top: 17px;;
+    margin-top: 17px;
+    ;
 }
 
 .label-color {
@@ -82,7 +83,7 @@ span.texto {
 .product-descr-box {
     margin-top: 20px;
     border-top: 1px solid #e4e3e3;
-    padding: 15px 20px 15px 20px;
+    padding: 20px;
     color: black;
 }
 
@@ -126,6 +127,7 @@ button {
     margin: 15px 0px 0px 0;
     padding-bottom: 15px;
     width: 100%;
+    overflow: auto;
 }
 
 .label {
@@ -150,7 +152,8 @@ p.texto {
 }
 
 .right-box,
-.product-caract-box {
+.product-caract-box,
+.product-descr-box {
     background-color: white;
     box-shadow: 0px 5px 10px #888888;
     border-radius: 10px;
@@ -160,6 +163,7 @@ p.texto {
     width: 20px;
     margin-right: 10px;
 }
+
 .titulo-producto-mobile {
     font-size: 1.3em;
 }
@@ -167,7 +171,16 @@ p.texto {
 /* ---------------------Estilos Carrusel -- Inicio */
 #carrusel {
     width: 100%;
-    height: 45vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #888888;
+}
+
+#carrusel img {
+    border-radius: 10px;
 }
 
 .slideshow-container {
@@ -206,6 +219,21 @@ p.texto {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.slideshow-container img {
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+    display: flex;
+}
+
+.main-top-section {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* ------------ Estilos Carrusel -- Fin */
