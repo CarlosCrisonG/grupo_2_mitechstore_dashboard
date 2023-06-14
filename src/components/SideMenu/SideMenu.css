@@ -1,13 +1,15 @@
 .sidemenu {
+    position: fixed;
+    left: 0;
+    top:0;
     background-color: #FF6700;
     width: 60px;
+    height: 100%;
     padding: 15px 0px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 500px;
-    min-width: 14%;
 }
 
 .sidemenu .logo {

@@ -1,0 +1,16 @@
+.arrow-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    margin-right: 10px;
+    border-radius: 10px;
+    background: white;
+    border: none;
+    box-shadow: 0px 5px 10px #888888;
+}
+
+.prev-button {
+    transform: rotate(180deg);
+}

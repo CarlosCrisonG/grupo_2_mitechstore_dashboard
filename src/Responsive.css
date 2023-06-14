@@ -7,8 +7,9 @@
 
 /*Tablets*/
 @media (min-width: 768px) {
-    #wrapper {
-        max-width: 768px;
+    .general-container {
+        width: 65%;
+        margin-left: 250px;
     }
     h1 {
         font-size: 2em;
@@ -20,8 +21,8 @@
     body {
         width: 75vw;
     }
-    #wrapper {
-        max-width: none;
+    .general-container {
+        width: 73%;
     }
     .general-container .title .icon {
         width: 30px;
@@ -33,6 +34,9 @@
 @media (min-width: 2560px) {
     body {
         width: 60vw;
+    }
+    .general-container {
+        width: 90%;
     }
 }
 

@@ -1,10 +1,9 @@
 import React from "react";
-import '../Styles.css';
-import Card from "../Card/Card";
-import Table from "../Table/Table";
-import Loader from "../Loader/Loader";
+import '../../Styles.css';
+import Table from "../../components/Table/Table";
+import { TailSpin } from 'react-loader-spinner'
 
-function Categories () {
+function Categories() {
 
     let [categories, setCategories] = React.useState([])
 
@@ -12,7 +11,7 @@ function Categories () {
         try {
             let categoriesFromApi = await fetch(`http://localhost:3000/api/products`)
             categoriesFromApi = await categoriesFromApi.json()
-            let rows = Object.keys(categoriesFromApi.meta.countByCategory).map((category, i) => ({ name: category, quantity: categoriesFromApi.meta.countByCategory[category], id: i + 1 }))    
+            let rows = Object.keys(categoriesFromApi.meta.countByCategory).map((category, i) => ({ name: category, quantity: categoriesFromApi.meta.countByCategory[category], id: i + 1 }))
             setCategories(rows)
         } catch (error) {
             console.log(error);
@@ -23,8 +22,8 @@ function Categories () {
         fetchCategoriesApi();
     }, [])
 
-        return (
-            <> {categories.length > 0 ?
+    return (
+        <> {categories.length > 0 ?
             <div className="general-container">
                 <div className="title">
                     <img className="icon" src="/icons/categorias-black.png" alt="icon"></img>
@@ -37,10 +36,21 @@ function Categories () {
                 />
             </div>
             :
-            <Loader />
-            }
-            </>
-        )
+            <div className="general-container">
+                <TailSpin
+                    height="80"
+                    width="80"
+                    color="#FF6700"
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    wrapperStyle={{}}
+                    wrapperClass="spinner"
+                    visible={true}
+                />
+            </div>
+        }
+        </>
+    )
 }
 
 export default Categories;
